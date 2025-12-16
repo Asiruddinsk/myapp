@@ -1,0 +1,444 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Portfolio Codezara Website Designer ">
+  <meta name="keywords" content="Codezara ">
+  <meta name="author" content="Codezara ">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Codezara</title>
+  <link rel="icon" type="image/x-icon" href="image/codezara-favicon.png">
+  <link rel="stylesheet" media="screen and (min-width:600px)" href="{{asset('asset/css/desktop.css')}}">
+  <link rel="stylesheet" media="screen and (max-width:600px)" href="{{asset('asset/css/mobile.css')}}">
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+ <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+
+</head>
+<body>
+  <div class="main">
+    <div class="sticky">
+      <header>
+          <div class="menu-logo">
+            <button class="bar" onclick="openMenuFunction()">&#9776;</button>
+            <img src="image/codezara-logo.png" alt="" class="logo">
+          </div>
+          
+          <div id="myNav" class="myNav">
+
+            <button onclick="closeFunction()" class="btn-close">&times;</button>
+            
+            <nav>
+              <img src="image/codezara-logo.png" alt="" id="logo">
+              <a href="">
+                Home
+              </a>
+              <a href="">About</a>
+              <a href="">Services</a>
+              <a href="">Contact</a>
+            </nav>
+            
+          </div>
+        <button class="signup-btn" onclick="signInFunction()"><i class="fas fa-user"></i>Sign In</button>
+      </header>
+
+      <!-- signin start======= -->
+      <div id="mySignin" class="mySignin-content">
+        <span class="close-signin" onclick="signinCloseFunction()">&times;</span>
+         <form action="" method="post">
+           <div class="text-center">
+            <h2>Sign In</h2>
+            <p class="mt-1">Get access to more learning features</p>
+           </div>
+          <div class="mt-1 text-center">
+            <span>Don't have an account?</span> <span class="register-toggle" onclick="registerFunction()">Register</span>
+          </div>
+
+          <input type="email" name="email" placeholder="Email" required class="form-control fs px-1 mt-1">
+          <input type="password" name="password" placeholder="Password" required class="form-control fs px-1 mt-1">
+          <div class="mt-1"><span class="register-toggle" onclick="forgotFunction()">Forgot your password?</span></div>
+          <input type="submit" value="Sign In" class="form-control fs px-1 mt-1 submit-btn">
+         </form>
+      </div>
+
+      <!-- register end======= -->
+
+      <!-- register start======= -->
+
+      <div id="mySignin_1" class="mySignin-content-1">
+        <span class="close-signin" onclick="signinCloseFunction()">&times;</span>
+        <form action="" method="post">
+           <div class="text-center">
+            <h2>Create your account</h2>
+           </div>
+          <div class="mt-1 text-center">
+            <span>Already have an account?</span> <span class="register-toggle" onclick="registerFunction()">Sign In</span>
+          </div>
+      
+          <input type="name" name="name" placeholder="Name" required class="form-control fs px-1 mt-1">
+          <input type="email" name="email" placeholder="Email" required class="form-control fs px-1 mt-1">
+          <input type="password" name="password" placeholder="Password" required class="form-control fs px-1 mt-1">
+          <input type="password" name="confirm_password" placeholder="Confirm Password" required
+            class="form-control fs px-1 mt-1">
+      
+          <input type="submit" value="create account" class="form-control fs px-1 mt-1 submit-btn">
+        </form>
+      </div>
+
+      <!-- register end======= -->
+
+
+      <!-- reset password start-->
+
+      <div id="mySignin_2" class="mySignin-content-2">
+        <span class="close-signin" onclick="signinCloseFunction()">&times;</span>
+        <form action="" method="post">
+          <div class="text-center">
+            <h2>Reset your password</h2>
+            <p class="mt-1">If the account exists, we will email you instructions to reset the password.</p>
+          </div>
+          
+          <input type="email" name="email" placeholder="Enter your email address" required class="form-control fs px-1 mt-1">
+          <input type="submit" value="Send reset link" class="form-control fs px-1 mt-1 submit-btn">
+
+          <div class="mt-1 text-center"><span>Return to</span> <span class="register-toggle" onclick="signInFunction()">Sign in</span></div>
+        </form>
+      </div>
+
+      <!-- reset password end-->
+
+    </div>
+
+    <!-- header end============ -->
+    
+ <div class="home">
+    <div class="div-1">
+      <h2 class="letter-spacing">Web Development</h2>
+      <p>Hi, My Name is Asiruddin Sk and my work 
+        Experience 4 years. I am a website designer
+        and developer. I am a Front-end Developer 
+        with web programming languages HTML CSS, and JavaScript
+        and a Back-end Developer with web. Programming language 
+        PHP, laravel, mysql, etc.
+        
+      </p>
+      <a href="" class="link-btn">Download Now</a>
+    </div>
+    <div class="div-2">
+      <div class="div-3">
+        <div class="">
+          <h4>Asiruddin Sk</h4>
+          <h6>As a Full Stack Web Developer</h6>
+        </div>
+         <div class="">
+          <img src="image/Im.jpg" alt="codezara"
+            style="width:150px;height:150px;object-fit:cover;border-radius:50%;border:5px solid #f4f4f4;margin-top:5px;">
+         </div>
+      </div>
+    </div>
+  </div>
+    
+
+    <div class="home-page">
+        <div class="">
+          <span class="typewriter-1">I AM,</span> <span id="typewriter" class="typewriter-2"></span>
+        </div>
+
+        <div style="background-color: #1f2f21;">
+          <p class="text-light">Front-end Development Language: HTML, CSS, JAVASCRIPT, BOOTSTRAP, REACT, Etc.</p>
+        </div>
+
+        <div class="learn-more-btn">
+          <a href="">HTML Learn</a>
+          <a href="">CSS Learn</a>
+          <a href="">JAVASCRIPT Learn</a>
+        </div>
+
+
+        <div style="background-color: #1f2f21;">
+          <p class="text-light">Back-end Development Language: PHP, MYSQL LARAVEL.</p>
+        </div>
+
+        <div class="learn-more-btn">
+          <a href="">PHP Learn</a>
+          <a href="">MYSQL Learn</a>
+          <a href="">LARAVEL Learn</a>
+        </div>
+
+        <div class="logo-codezara">
+          <img src="image/codezara-logo-codezara.png" alt="codezara" class="img-fluid">
+        </div>
+
+         
+    </div>
+
+    <div class="scrollmenu-design">
+      <a href="#home">
+        <i class="fa-solid fa-code f-size"></i>
+      </a>
+      <a href="#news">
+        <i class="fa-solid fa-user f-size"></i>
+      </a>
+      <a href="#contact">
+        <i class="fa-solid fa-briefcase f-size"></i>
+      </a>
+      <a href="#about">
+        <i class="fa-solid fa-image f-size"></i>
+      </a>
+      <a href="#about">
+        <i class="fa-solid fa-video f-size"></i>
+      </a>
+      <a href="#about">
+        <i class="fa-solid fa-film f-size"></i>
+      </a>
+    </div>
+
+    <!-- about page dsign----------- -->
+
+    <div class="text-center text-light p">
+      <h1 class="letter-spacing">ABOUT US</h1>
+      <div class="line-design">
+        <div class="line-1"></div>
+        <div class="line-2"></div>
+        <div class="line-3"></div>
+        <div class="line-4"></div>
+      </div>
+    </div>
+    
+    <div class="banner">
+       <div class="about-div">
+          <div class="about-text">
+             <h1 class="color line-height">Codezara | About us</h1>
+             <p class="color line-height">At CodeZara, we turn ideas into powerful digital experiences. We specialise in website design and development, crafting visually stunning, user-friendly, and high-performing websites tailored to your brand and business goals. Our team of creative designers and skilled developers work together to deliver modern, responsive, and SEO-friendly websites that not only look great but also drive results. Whether you need a corporate website, e-commerce platform, portfolio site, or custom web application, CodeZara provides end-to-end solutions that help your business stand out online. We focus on innovation, quality, and customer satisfaction, ensuring every project reflects your vision and enhances your online presence.</p>
+            <ol class="ol">
+              <li>Custom Website Design & Development</li>
+              <li>E-commerce Solutions</li>
+              <li>UI/UX Design</li>
+              <li>Website Redesign & Maintenance</li>
+              <li>Web Application Development</li>
+              <li>SEO & Performance Optimisation</li>
+              <li>Let CodeZara build the digital foundation your business deserves — one that is creative, functional, and future-ready.</li>
+            </ol>
+            
+            
+          </div>
+          <div class="about-mobile">
+             <div class="mobile-design">
+                  <div class="camera-design"></div>
+                  <div class="mic-design"></div>
+                <div class="screen-design">
+                  <iframe src="index.html" frameborder="0" style="width: 100%;height: 572px;"></iframe>
+                </div>
+                   <div class="menu-button-design-home"></div>
+                   <div class="volume-button-design"></div>
+                  
+             </div>
+          </div>
+       </div>
+    </div>
+
+    <!-- product page design----------- -->
+
+    <div class="text-center text-light p">
+      <h1 class="letter-spacing">MY PRODUCT</h1>
+       <div class="line-design">
+        <div class="line-1"></div>
+        <div class="line-2"></div>
+        <div class="line-3"></div>
+        <div class="line-4"></div>
+       </div>
+
+    </div>
+
+    <div class="card-container">
+      <div class="card p">
+         <a href="image/codezara1.jpg" target="_blank">
+          <img src="image/codezara1.jpg" alt="portfolio" style="width: 100%;height: 300px;object-fit: contain;">
+         </a>
+         <div class="card-body">
+            <h2 class="card-title py-1 px-1">Portfolio Website</h2>
+            <p class="card-para py-1 px-1">Portfolio Website design in HTML CSS,JAVASCRIPT</p>
+            <form action="" method="post">
+              <div class="flex space-between align-items-center gap">
+                  <div class="form-control">
+                    <input type="number" max="10" min="1" placeholder="quantity 1" class="form-control fs px-1" required>
+                  </div>
+                  <div class="form-control">
+                    <input type="submit" value="Buy Now" class="btn-warning form-control">
+                  </div>
+              </div>
+          </form>
+         </div>
+      </div>
+
+
+      <div class="card p">
+        <a href="image/codezara1.jpg" target="_blank">
+          <img src="image/codezara1.jpg" alt="portfolio" style="width: 100%;height: 300px;object-fit: contain;">
+        </a>
+        <div class="card-body">
+          <h2 class="card-title py-1 px-1">Portfolio Website</h2>
+          <p class="card-para py-1 px-1">Portfolio Website design in HTML CSS,JAVASCRIPT</p>
+          <form action="" method="post">
+            <div class="flex space-between align-items-center gap">
+              <div class="form-control">
+                <input type="number" max="10" min="1" placeholder="quantity 1" class="form-control fs px-1" required>
+              </div>
+              <div class="form-control">
+                <input type="submit" value="Buy Now" class="btn-warning form-control">
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+
+      <div class="card p">
+        <a href="image/codezara1.jpg" target="_blank">
+          <img src="image/codezara1.jpg" alt="portfolio" style="width: 100%;height: 300px;object-fit: contain;">
+        </a>
+        <div class="card-body">
+          <h2 class="card-title py-1 px-1">Portfolio Website</h2>
+          <p class="card-para py-1 px-1">Portfolio Website design in HTML CSS,JAVASCRIPT</p>
+          <form action="" method="post">
+            <div class="flex space-between align-items-center gap">
+              <div class="form-control">
+                <input type="number" max="10" min="1" placeholder="quantity 1" class="form-control fs px-1" required>
+              </div>
+              <div class="form-control">
+                <input type="submit" value="Buy Now" class="btn-warning form-control">
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+
+      <div class="card p">
+        <a href="image/codezara1.jpg" target="_blank">
+          <img src="image/codezara1.jpg" alt="portfolio" style="width: 100%;height: 300px;object-fit: contain;">
+        </a>
+        <div class="card-body">
+          <h2 class="card-title py-1 px-1">Portfolio Website</h2>
+          <p class="card-para py-1 px-1">Portfolio Website design in HTML CSS,JAVASCRIPT</p>
+          <form action="" method="post">
+            <div class="flex space-between align-items-center gap">
+              <div class="form-control">
+                <input type="number" max="10" min="1" placeholder="quantity 1" class="form-control fs px-1" required>
+              </div>
+              <div class="form-control">
+                <input type="submit" value="Buy Now" class="btn-warning form-control">
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="card p">
+        <a href="image/codezara1.jpg" target="_blank">
+          <img src="image/codezara1.jpg" alt="portfolio" style="width: 100%;height: 300px;object-fit: contain;">
+        </a>
+        <div class="card-body">
+          <h2 class="card-title py-1 px-1">Portfolio Website</h2>
+          <p class="card-para py-1 px-1">Portfolio Website design in HTML CSS,JAVASCRIPT</p>
+          <form action="" method="post">
+            <div class="flex space-between align-items-center gap">
+              <div class="form-control">
+                <input type="number" max="10" min="1" placeholder="quantity 1" class="form-control fs px-1" required>
+              </div>
+              <div class="form-control">
+                <input type="submit" value="Buy Now" class="btn-warning form-control">
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="card p">
+        <a href="image/codezara1.jpg" target="_blank">
+          <img src="image/codezara1.jpg" alt="portfolio" style="width: 100%;height: 300px;object-fit: contain;">
+        </a>
+        <div class="card-body">
+          <h2 class="card-title py-1 px-1">Portfolio Website</h2>
+          <p class="card-para py-1 px-1">Portfolio Website design in HTML CSS,JAVASCRIPT</p>
+          <form action="" method="post">
+            <div class="flex space-between align-items-center gap">
+              <div class="form-control">
+                <input type="number" max="10" min="1" placeholder="quantity 1" class="form-control fs px-1" required>
+              </div>
+              <div class="form-control">
+                <input type="submit" value="Buy Now" class="btn-warning form-control">
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    
+    
+    </div>
+
+
+    <!-- contact us page design============ -->
+
+    <div class="text-center text-light p">
+      <h1 class="letter-spacing">CONTACT US</h1>
+      <div class="line-design">
+        <div class="line-1"></div>
+        <div class="line-2"></div>
+        <div class="line-3"></div>
+        <div class="line-4"></div>
+      </div>
+    
+    </div>
+
+    <div class="contact-container">
+       <div class="">
+          <img src="image/codezara-logo-codezara.png" alt="" class="img-fluid">
+       </div>
+       <div class="">
+         <form action="" method="post">
+            <h1 class="text-light">Contact Us</h1>
+            <div class="mt-1">
+              <label for="name" class="text-light fs">Name :</label>
+              <input type="text" class="form-control fs px-1 mt-1" placeholder="Name" name="name" required>
+            </div>
+
+            <div class="mt-1">
+              <label for="email" class="text-light fs">Email :</label>
+              <input type="email" class="form-control fs px-1 mt-1" placeholder="Email" name="email" required>
+            </div>
+
+            <div class="mt-1">
+              <label for="phone" class="text-light fs">Phone :</label>
+              <input type="number" class="form-control fs px-1 mt-1" placeholder="phone" name="phone" required>
+            </div>
+
+            <div class="mt-1">
+              <label for="address" class="text-light fs">Address :</label> <br>
+              <textarea class="form-control fs px-1 mt-1" placeholder="Address" name="address" cols="20" rows="5"></textarea>
+            </div>
+
+            <div class="mt-1">
+              <input type="submit" class="fs px-1 btn-submit" value="Send">
+            </div>
+
+         </form>
+       </div>
+    </div>
+    
+    
+    
+    
+
+    <!-- footer start============ -->
+      <div class="footer">
+        <p class="letter-spacing">Copyright 2025-2026 by Refsnes Data. All Rights Reserved. Codezara is Powered by Codezara.com </p>
+      </div>
+    
+  </div>
+    
+    
+  <script src="{{asset('asset/js/index.js')}}"></script>
+  
+</body>
+</html>
