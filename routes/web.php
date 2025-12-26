@@ -27,3 +27,4 @@ Route::get('/product', [HomeController::class, 'Product']);
 Route::get('/contact', [HomeController::class, 'Contact']);
 
 Route::get('/home', [AdminController::class, 'Admin'])->middleware(['admin', 'auth']);
+Route::get('/catagory', [AdminController::class, 'Catagory'])->middleware(['admin', 'auth']);

@@ -17,4 +17,9 @@ class AdminController extends Controller
             return redirect('/login');
         }
     }
+
+    public function Catagory()
+    {
+        return view('admin.catagory');
+    }
 }
