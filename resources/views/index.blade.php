@@ -69,6 +69,8 @@
 
             <!-- footer start============ -->
 
+            @include('components.home.footer')
+
 
         </div>
 

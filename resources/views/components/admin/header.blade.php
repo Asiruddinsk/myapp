@@ -108,6 +108,41 @@
         </div>
         <div class="center-d">
             <img src="{{('asset/dashboard/image/Im.jpg')}}" width="50" height="50" class="ibr">
+            @auth
+
+            <a href="javascript:void(0)" class="nav-link" onclick="profileFunction()">
+                @if (Laravel\Jetstream\Jetstream::managesProfilePhotos())
+                <img class="size-8 rounded-full object-cover" src="{{ Auth::user()->profile_photo_url }}"
+                    alt="{{ Auth::user()->name }}" width="50" height="50"
+                    style="border: 1px solid white;border-radius:50px;padding:3px;box-shadow:0px 8px 16px 0px rgba(0,0,0,0.5)" />
+                @else
+                {{ Auth::user()->name }}
+                @endif
+            </a>
+
+            <div class="dash-profile" id="dashProfile">
+                <a href="{{ url('/dashboard') }}" class="{{'dashboard' == request()->path() ? 'activelink' : '' }}">
+                    Dashboard</a>
+                <a href="{{ route('profile.show') }}">{{ __('Profile') }}</a>
+                <form method="POST" action="{{ route('logout') }}">
+                    @csrf
+
+                    <a href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                    this.closest('form').submit();" class="nav-link">
+                        {{ __('Log Out') }}
+                    </a>
+                </form>
+
+                @else
+
+                {{-- <a href="{{ route('login') }}" class="signin-btn">Log in</a> --}}
+
+                @if (Route::has('register'))
+                <a href="{{ route('register') }}" class="signin-btn">My account</a>
+                @endif
+            </div>
+
+            @endauth
         </div>
     </div>
 

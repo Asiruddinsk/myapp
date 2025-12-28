@@ -16,6 +16,15 @@ body {
   background-image: var(--gradient);
 }
 
+.text-danger {
+  color: red;
+  text-align: center;
+}
+
+.text-success {
+  color: #028d02;
+  text-align: center;
+}
 
 :root {
   --blue: #1f8f02;
@@ -25,6 +34,18 @@ body {
   --hover: #d4d4d4;
   --gradient: linear-gradient(to right, rgb(25, 38, 62), rgba(37, 25, 57, 0.993), rgb(42, 12, 45));
 
+}
+
+.reset-password-d {
+  width: 360px;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--background-color);
+  padding: 20px 20px;
+  border-radius: 10px;
 }
 
 .card-container {

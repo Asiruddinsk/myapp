@@ -1,36 +1,51 @@
-<x-guest-layout>
-    <x-authentication-card>
-        <x-slot name="logo">
-            <x-authentication-card-logo />
-        </x-slot>
+<html>
 
-        <x-validation-errors class="mb-4" />
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Portfolio Codezara Website Designer ">
+        <meta name="keywords" content="Codezara ">
+        <meta name="author" content="Codezara ">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <form method="POST" action="{{ route('password.update') }}">
-            @csrf
+        <title>Reset Password</title>
+        @include('components.home.css-link')
 
-            <input type="hidden" name="token" value="{{ $request->route('token') }}">
 
-            <div class="block">
-                <x-label for="email" value="{{ __('Email') }}" />
-                <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email', $request->email)" required autofocus autocomplete="username" />
+    </head>
+
+    <body>
+        <div class="main">
+            <div class="reset-password-d">
+                @include('components.logo')
+                <x-validation-errors class="mb-4 text-danger" />
+
+                <form method="POST" action="{{ route('password.update') }}">
+                    @csrf
+                    <input type="hidden" name="token" value="{{ $request->route('token') }}">
+                    <input type="email" name="email" :value="old('email', $request->email)" placeholder="email" required
+                        autofocus autocomplete="username" class="form-control fs px-1 mt-1">
+                    <input type="password" name="password" required autocomplete="new-password"
+                        placeholder="new password" class="form-control fs px-1 mt-1">
+                    <input type="password" name="password_confirmation" required autocomplete="new-password"
+                        placeholder="confirmation password" class="form-control fs px-1 mt-1">
+
+                    <button class="form-control fs px-1 mt-1 submit-btn">
+                        {{ __('Reset Password') }}
+                    </button>
+                </form>
             </div>
 
-            <div class="mt-4">
-                <x-label for="password" value="{{ __('Password') }}" />
-                <x-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="new-password" />
-            </div>
 
-            <div class="mt-4">
-                <x-label for="password_confirmation" value="{{ __('Confirm Password') }}" />
-                <x-input id="password_confirmation" class="block mt-1 w-full" type="password" name="password_confirmation" required autocomplete="new-password" />
-            </div>
 
-            <div class="flex items-center justify-end mt-4">
-                <x-button>
-                    {{ __('Reset Password') }}
-                </x-button>
-            </div>
-        </form>
-    </x-authentication-card>
-</x-guest-layout>
+
+
+            {{-- footer=========== --}}
+            {{-- @include('components.home.footer') --}}
+        </div>
+
+
+        @include('components.home.js-link')
+
+    </body>
+
+</html>
