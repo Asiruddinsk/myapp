@@ -1,10 +1,10 @@
 <div class="sticky">
     <header>
         <div class="menu-logo">
-            <img src="{{asset('asset/image/codezara-logo-codezara.png')}}" alt="" class="logo">
+            <img src="{{asset('asset/image/codezara-logo-codezara.png')}}" class="logo" alt="" width="60" height="60">
             <button class="bar" onclick="openMenuFunction()">&#9776;</button>
-
         </div>
+
 
         <div id="myNav" class="myNav">
 
@@ -21,17 +21,27 @@
             </nav>
 
         </div>
-        @if (Route::has('login'))
-        @auth
-        <a href="{{ url('/dashboard') }}" class="signup-btn">
-            {{Auth::user()->name}}
-        </a>
-        @else
 
-        <button class="signup-btn" onclick="signInFunction()"><i class="fas fa-user"></i>Sign In</button>
-        @endauth
+        <div class="search-btn">
+            <input type="search" name="search">
+            <button type="submit" class="submit-btn-search">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
 
-        @endif
+        <div class="signup">
+            @if (Route::has('login'))
+            @auth
+            <a href="{{ url('/dashboard') }}" class="signup-btn">
+                {{Auth::user()->name}}
+            </a>
+            @else
+
+            <button class="signup-btn" onclick="signInFunction()"><i class="fas fa-user"></i>Sign In</button>
+            @endauth
+
+            @endif
+        </div>
 
     </header>
 

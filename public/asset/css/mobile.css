@@ -10,6 +10,35 @@
   color: var(--white);
 }
 
+.search-btn {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--hover);
+  border-radius: 30px;
+  overflow: auto;
+  white-space: nowrap;
+}
+
+input[type="search"] {
+  width: auto;
+  border: none;
+  outline: none;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.submit-btn-search {
+  width: auto;
+  border: none;
+  outline: none;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
 body {
   width: 100%;
   height: 100%;
@@ -96,10 +125,14 @@ body {
   color: #1f8f02;
 }
 
+.signup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .signup-btn {
-  position: fixed;
-  top: 15px;
-  right: 20px;
+  position: relative;
   text-decoration: none;
   background-color: #005500;
   color: var(--white);
@@ -427,6 +460,7 @@ header {
 }
 
 .bar {
+  position: relative;
   padding: 10px;
   font-size: 30px;
   background-color: var(--background-color);

@@ -13,6 +13,30 @@
   --color: #ffffff;
   --hover: #050505;
   --border: #d4d4d434;
+  --green: #005500;
+}
+
+.activelink {
+  background-color: var(--green);
+}
+
+.dashbord-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.dashbord-link a {
+  padding: 20px 10px;
+  text-decoration: none;
+  color: var(--color);
+  border-radius: 5px;
+  transition: 0.5s;
+}
+
+.dashbord-link a:hover {
+  background-color: var(--hover);
 }
 
 .main {
@@ -70,6 +94,14 @@
 
 .mt {
   margin-top: 20px;
+}
+
+.fs-1 {
+  font-size: 4vw;
+}
+
+.py-1 {
+  padding: 40px 0px;
 }
 
 .mb {
@@ -158,6 +190,12 @@ header {
   border-radius: 5px;
   cursor: pointer;
   display: none;
+  transition: 0.5s;
+}
+
+.bar-btn:hover {
+  background-color: var(--hover);
+  color: var(--color);
 }
 
 .nav {
@@ -188,5 +226,39 @@ header {
 }
 
 .nav a:hover {
+  background-color: var(--hover);
+}
+
+/* dashboard profile =============start design */
+
+.dash-profile {
+  position: absolute;
+  top: 60px;
+  right: 0;
+  bottom: 0;
+  width: 300px;
+  height: 400px;
+  background-color: var(--side-bar-color);
+  box-shadow: 0px 8px 16px 0px rgba(240, 237, 237, 0.5);
+  padding: 20px 0px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  display: none;
+
+}
+
+.profile-show {
+  display: block;
+}
+
+.dash-profile a {
+  display: block;
+  padding: 10px 20px;
+  color: var(--color);
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+.dash-profile a:hover {
   background-color: var(--hover);
 }

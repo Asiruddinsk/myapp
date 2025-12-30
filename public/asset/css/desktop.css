@@ -23,6 +23,33 @@ body {
 
 }
 
+.search-btn {
+  position: relative;
+  display: flex;
+  border: 1px solid var(--hover);
+  border-radius: 30px;
+}
+
+input[type="search"] {
+  width: 100%;
+  padding: 10px 0px;
+  border: none;
+  outline: none;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.submit-btn-search {
+  width: auto;
+  padding: 10px 0px;
+  border: none;
+  outline: none;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
 .text-danger {
   color: red;
   text-align: center;
@@ -83,6 +110,12 @@ body {
   background-color: transparent;
   border-radius: 30px;
   color: #1f8f02;
+}
+
+.signup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .signup-btn {
@@ -449,9 +482,10 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
   padding: 0px 20px;
   background-color: var(--background-color);
+  overflow: auto;
+  white-space: nowrap;
 }
 
 nav a {

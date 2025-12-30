@@ -93,7 +93,7 @@
 
 
 
-        <script src="dashboard/js/main.js"></script>
+        <script src="asset/dashboard/js/main.js"></script>
     </body>
 
 </html>

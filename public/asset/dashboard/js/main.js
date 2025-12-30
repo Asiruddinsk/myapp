@@ -21,3 +21,12 @@ window.onclick = function ( event )
     }
 }
 
+
+
+// profile function =============start
+
+function profileFunction ()
+{
+    document.getElementById( 'dashProfile' ).classList.toggle( 'profile-show' );
+}
+
