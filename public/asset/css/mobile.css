@@ -15,28 +15,27 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid var(--hover);
-  border-radius: 30px;
   overflow: auto;
   white-space: nowrap;
 }
 
 input[type="search"] {
-  width: auto;
+  width: 50%;
   border: none;
   outline: none;
   border-top-left-radius: 30px;
   border-bottom-left-radius: 30px;
-  padding-left: 10px;
-  padding-right: 10px;
+  border: 1px solid var(--hover);
+  padding: 10px 10px;
 }
 
 .submit-btn-search {
-  width: auto;
   border: none;
   outline: none;
   border-top-right-radius: 30px;
   border-bottom-right-radius: 30px;
+  border: 1px solid var(--hover);
+  padding: 10px 10px;
 }
 
 body {
@@ -63,6 +62,45 @@ body {
   --hover: #d4d4d4;
   --gradient: linear-gradient(to right, rgb(25, 38, 62), rgba(37, 25, 57, 0.993), rgb(42, 12, 45));
 
+}
+
+/* dashboard profile =============start design */
+.fa-angle-down {
+  position: absolute;
+  right: 0px;
+  top: 20px;
+}
+
+.dash-profile {
+  position: absolute;
+  top: 60px;
+  right: 0;
+  bottom: 0;
+  width: 300px;
+  height: 400px;
+  background-color: var(--background-color);
+  box-shadow: 0px 8px 16px 0px rgba(240, 237, 237, 0.5);
+  padding: 20px 0px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  display: none;
+
+}
+
+.dashboard-profile-show {
+  display: block;
+}
+
+.dash-profile a {
+  display: block;
+  padding: 10px 20px;
+  color: var(--color);
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+.dash-profile a:hover {
+  background-color: var(--hover);
 }
 
 .reset-password-d {
@@ -139,7 +177,7 @@ body {
   border: none;
   cursor: pointer;
   border-radius: 30px;
-  padding: 10px 20px;
+  padding: 10px 5px;
   transition: 0.5s;
 }
 

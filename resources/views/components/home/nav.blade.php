@@ -32,15 +32,40 @@
         <div class="signup">
             @if (Route::has('login'))
             @auth
-            <a href="{{ url('/dashboard') }}" class="signup-btn">
-                {{Auth::user()->name}}
+            <a href="javascript:void(0)" class="nav-link" onclick="profileFunction()">
+                @if (Laravel\Jetstream\Jetstream::managesProfilePhotos())
+                <img class="size-8 rounded-full object-cover ibr" src="{{ Auth::user()->profile_photo_url }}"
+                    alt="{{ Auth::user()->name }}" width="50" height="50"
+                    style="border-radius: 50%;border:2px solid rgb(156, 127, 127);padding:2px;" />
+                @else
+                {{ Auth::user()->name }}
+
+                @endif
+                <i class='fas fa-angle-down'></i>
             </a>
+
+            <div class="dash-profile" id="dashProfile">
+                <a href="{{ url('/home') }}" class="{{'home' == request()->path() ? 'activelink' : '' }}">
+                    Dashboard</a>
+                <a href="{{ route('profile.show') }}">{{ __('Profile') }}</a>
+                <form method="POST" action="{{ route('logout') }}">
+                    @csrf
+
+                    <a href="{{ route('logout') }}" onclick="event.preventDefault();
+                        this.closest('form').submit();" class="nav-link">
+                        {{ __('Log Out') }}
+                    </a>
+                </form>
+
+            </div>
+
             @else
 
-            <button class="signup-btn" onclick="signInFunction()"><i class="fas fa-user"></i>Sign In</button>
+            <button class="signup-btn" onclick="signInFunction()"><i class="fas fa-user"></i>SignIn</button>
             @endauth
 
             @endif
+
         </div>
 
     </header>

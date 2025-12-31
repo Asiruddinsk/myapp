@@ -11,11 +11,6 @@
     </div>
 
     <div class="nav" id="myNav">
-        @if ()
-
-        @else
-
-        @endif
         <a href="{{('/home')}}">
             <div class="side-link">
                 <i class="fa fa-home"></i>

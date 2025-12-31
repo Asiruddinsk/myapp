@@ -1,3 +1,15 @@
+// profile function =============start
+
+function profileFunction ()
+{
+    document.getElementById( 'dashProfile' ).classList.toggle( 'dashboard-profile-show' );
+}
+
+
+
+
+
+
 new Typewriter( '#typewriter', {
     strings: [ 'Website Designer',
         'web developer',
@@ -163,8 +175,6 @@ for ( var i = 0; i < btns.length; i++ )
         this.className += " active-filter";
     } );
 }
-
-
 
 
 
