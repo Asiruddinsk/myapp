@@ -8,14 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <title>Codezara</title>
-        <link rel="icon" type="image/x-icon" href="image/codezara-favicon.png">
-        <link rel="stylesheet" media="screen and (min-width:600px)" href="{{asset('asset/css/desktop.css')}}">
-        <link rel="stylesheet" media="screen and (max-width:600px)" href="{{asset('asset/css/mobile.css')}}">
-
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-            integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-            crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+        @include('components.home.css-link')
 
     </head>
 

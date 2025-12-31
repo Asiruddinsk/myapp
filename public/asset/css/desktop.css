@@ -65,8 +65,14 @@ body {
 .search-btn {
   position: relative;
   display: flex;
-  border: 1px solid var(--hover);
-  border-radius: 30px;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 input[type="search"] {
@@ -74,17 +80,31 @@ input[type="search"] {
   padding: 10px 10px;
   border: none;
   outline: none;
+  border: 1px solid var(--hover);
   border-top-left-radius: 30px;
   border-bottom-left-radius: 30px;
+
 }
 
 .submit-btn-search {
   width: auto;
-  padding: 10px 10px;
+  padding: 15px 10px;
+  margin-left: -5px;
   border: none;
   outline: none;
   border-top-right-radius: 30px;
   border-bottom-right-radius: 30px;
+  border-top: 1px solid var(--hover);
+  border-bottom: 1px solid var(--hover);
+  border-right: 1px solid var(--hover);
+  background-color: var(--blue);
+  color: var(--white);
+  transition: 0.5s;
+}
+
+.submit-btn-search:hover {
+  background-color: var(--hover);
+  cursor: pointer;
 }
 
 .text-danger {
@@ -265,50 +285,7 @@ input[type="search"] {
 /* sign in form create end */
 
 
-.card {
-  box-shadow: 1px 1px 5px 1px rgba(241, 239, 239, 0.5);
-  border-radius: 10px;
-}
 
-.card a img {
-  transition: 0.5s;
-}
-
-.card a img:hover {
-  transform: scale(1.2);
-}
-
-.card-title {
-  color: white;
-}
-
-.card-para {
-  color: white;
-}
-
-.text-green {
-  color: #1f8f02;
-}
-
-.fs {
-  font-size: 20px;
-}
-
-.mt-1 {
-  margin-top: 20px;
-}
-
-.mb-1 {
-  margin-bottom: 20px;
-}
-
-.px-1 {
-  padding: 13px;
-}
-
-.py-1 {
-  padding: 10px;
-}
 
 .line-design {
   display: flex;
@@ -367,10 +344,6 @@ input[type="search"] {
   gap: 20px;
 }
 
-.card-h {
-  width: 300px;
-  height: 300px;
-}
 
 .btn-warning {
   background-color: #f9bc15;
@@ -391,32 +364,7 @@ input[type="search"] {
   letter-spacing: 0.1rem;
 }
 
-.p {
-  padding: 20px 20px;
-}
 
-.text-light {
-  color: white;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.img-fluid {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-
-}
-
-.form-control {
-  width: 100%;
-  height: auto;
-  border: 1px solid #d4d4d4;
-  border-radius: 10px;
-
-}
 
 .typewriter-1 {
   font-size: 5vw;
@@ -456,10 +404,6 @@ input[type="search"] {
   line-height: 26px;
   letter-spacing: 0.1rem;
 
-}
-
-.color {
-  color: white;
 }
 
 .line-height {
@@ -519,7 +463,6 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0px 20px;
   background-color: var(--background-color);
   overflow: auto;
   white-space: nowrap;
@@ -798,19 +741,6 @@ div.scrollmenu-design a {
 
 }
 
-.f-size:hover {
-  background-color: #ea4335;
-}
-
-.f-size {
-  font-size: 185px;
-  box-shadow: 0px 8px 16px 0px #120101;
-  background-color: #547dbf;
-  padding: 10px;
-  border-radius: 10px;
-  color: #f9bc15;
-  transition: 0.5s ease;
-}
 
 ::-webkit-scrollbar {
   background-color: transparent;

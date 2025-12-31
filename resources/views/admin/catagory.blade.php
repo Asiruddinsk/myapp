@@ -16,6 +16,9 @@
             crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
 
     </head>
 
@@ -25,7 +28,19 @@
 
             <div class="body">
 
-                <h1 class="white">Catagory page</h1>
+                <h1 class="py-1 px-1">Add Catagory</h1>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-6 col-md-6 col-12">
+                            <form action="" method="post">
+                                <input type="text" class="form-control" name="catagory" placeholder="add catagory">
+                            </form>
+                        </div>
+                        <div class="col-xl-6 col-md-6 col-12">
+                            <h1>show catagory</h1>
+                        </div>
+                    </div>
+                </div>
 
             </div>
 
@@ -36,7 +51,7 @@
 
 
 
-        <script src="dashboard/js/main.js"></script>
+        <script src="asset/dashboard/js/main.js"></script>
     </body>
 
 </html>

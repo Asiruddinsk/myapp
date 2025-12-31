@@ -23,10 +23,13 @@
         </div>
 
         <div class="search-btn">
-            <input type="search" name="search">
-            <button type="submit" class="submit-btn-search">
-                <i class="fas fa-search"></i>
-            </button>
+            <form action="" method="get">
+                @csrf
+                <div class="search">
+                    <input type="search" name="search" placeholder="Search Content">
+                    <button type="submit" class="submit-btn-search"><i class="fas fa-search"></i></button>
+                </div>
+            </form>
         </div>
 
         <div class="signup">
@@ -91,20 +94,28 @@
                     onclick="registerFunction()">Register</span>
             </div>
 
-            <input type="email" name="email" type="email" placeholder="Email" required
-                class="form-control fs px-1 mt-1">
-            <input type="password" name="password" type="password" placeholder="Password" required
-                class="form-control fs px-1 mt-1">
+            <div class="mt-1">
+                <input type="email" name="email" type="email" placeholder="Email" required class="form-control">
+            </div>
+            <div class="mt-1">
+                <input type="password" name="password" type="password" placeholder="Password" required
+                    class="form-control">
+            </div>
 
-            <input type="checkbox" class="mt-1" id="remember_me" name="remember">
-            <span class="ms-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
+
+            <div class="mt-1">
+                <input type="checkbox" class="mt-1" id="remember_me" name="remember">
+                <span class="ms-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
+            </div>
 
             <div class="mt-1"><span class="register-toggle" onclick="forgotFunction()">Forgot your password?</span>
             </div>
 
-            <button class="form-control fs px-1 mt-1 submit-btn">
-                {{ __('Log in') }}
-            </button>
+            <div class="mt-1">
+                <button class="form-control submit-btn">
+                    {{ __('Log in') }}
+                </button>
+            </div>
         </form>
     </div>
 
