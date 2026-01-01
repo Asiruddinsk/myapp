@@ -28,3 +28,10 @@ Route::get('/contact', [HomeController::class, 'Contact']);
 
 Route::get('/home', [AdminController::class, 'Admin'])->middleware(['admin', 'auth']);
 Route::get('/catagory', [AdminController::class, 'Catagory'])->middleware(['admin', 'auth']);
+Route::post('/add-catagory', [AdminController::class, 'add_catagory'])->middleware(['admin', 'auth']);
+Route::get('/edit/{id}', [AdminController::class, 'edit_catagory'])->middleware(['admin', 'auth']);
+Route::post('/edit-catagory/{id}', [AdminController::class, 'edit_catagory_confirm'])->middleware(['admin', 'auth']);
+Route::get('/delete/{id}', [AdminController::class, 'delete_catagory'])->middleware(['admin', 'auth']);
+
+
+

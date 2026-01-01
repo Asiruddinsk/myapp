@@ -8,17 +8,9 @@
         <meta name="keywords" content="codezara dashboard">
         <meta name="author" content="John Doe">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Dashboard</title>
-        <link rel="stylesheet" media="(max-width:600px)" href="{{('asset/dashboard/css/mobile.css')}}">
-        <link rel="stylesheet" media="(min-width:600px)" href="{{('asset/dashboard/css/desktop.css')}}">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-            integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-            crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-            integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <title>Add Catagory</title>
 
+        @include('components.admin.css-link')
 
     </head>
 
@@ -27,17 +19,51 @@
             @include('components.admin.header')
 
             <div class="body">
-
-                <h1 class="py-1 px-1">Add Catagory</h1>
-                <div class="container">
+                @include('sweetalert::alert')
+                <div class="container py-5">
                     <div class="row">
                         <div class="col-xl-6 col-md-6 col-12">
-                            <form action="" method="post">
-                                <input type="text" class="form-control" name="catagory" placeholder="add catagory">
+                            <h1 class="py-1 px-1">Add Catagory</h1>
+                            <form action="{{ url('/add-catagory') }}" method="post">
+                                @csrf
+                                <div class="">
+                                    <input type="text" class="form-control" name="catagory" placeholder="add catagory">
+                                </div>
+                                <div class="mt-3">
+                                    <button type="submit" class="btn btn-primary">Save</button>
+                                </div>
                             </form>
                         </div>
                         <div class="col-xl-6 col-md-6 col-12">
                             <h1>show catagory</h1>
+                            <div class="row">
+                                <div class="col-12 table-responsive">
+                                    <table class="table">
+                                        <tr>
+                                            <th>Id</th>
+                                            <th>Catagory add</th>
+                                            <th>Edit</th>
+                                            <th>Delete</th>
+                                        </tr>
+                                        @foreach ($data as $data)
+                                        <tr>
+                                            <td>{{$data->id}}</td>
+                                            <td>{{$data->catagory}}</td>
+                                            <td>
+                                                <a href="{{url('edit',$data->id)}}">
+                                                    <i class="fa fa-edit"></i>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a href="{{url('delete',$data->id)}}">
+                                                    <i class="fa fa-trash"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        @endforeach
+                                    </table>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

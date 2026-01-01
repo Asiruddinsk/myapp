@@ -2,7 +2,7 @@
 
     <div class="flex">
         <div class="logo-div">
-            <img src="{{('asset/dashboard/image/codezara-logo-codezara.png')}}" width="50" height="50" class="ibr">
+            <img src="{{('/asset/dashboard/image/codezara-logo-codezara.png')}}" width="50" height="50" class="ibr">
         </div>
         <div class="dashbord-link">
             <button onclick="openNavbarFunction()" class="bar-btn">&#9776;</button>
