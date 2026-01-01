@@ -1,4 +1,4 @@
-<div class="text-center text-light p">
+<div class="text-center text-light py-5">
     <h1 class="letter-spacing">ABOUT US</h1>
     <div class="line-design">
         <div class="line-1"></div>
@@ -11,8 +11,8 @@
 <div class="banner">
     <div class="about-div">
         <div class="about-text">
-            <h1 class="color line-height">Codezara | About us</h1>
-            <p class="color line-height">At CodeZara, we turn ideas into powerful digital experiences. We
+            <h1 class="text-light line-height">Codezara | About us</h1>
+            <p class="text-light line-height">At CodeZara, we turn ideas into powerful digital experiences. We
                 specialise in website design and development, crafting visually stunning, user-friendly, and
                 high-performing websites tailored to your brand and business goals. Our team of creative
                 designers and skilled developers work together to deliver modern, responsive, and

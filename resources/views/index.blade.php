@@ -24,22 +24,22 @@
 
             <div class="scrollmenu-design">
                 <a href="#home">
-                    <i class="fa-solid fa-code f-size"></i>
+                    <i class="fa-solid fa-code fs-1"></i>
                 </a>
                 <a href="#news">
-                    <i class="fa-solid fa-user f-size"></i>
+                    <i class="fa-solid fa-user fs-1"></i>
                 </a>
                 <a href="#contact">
-                    <i class="fa-solid fa-briefcase f-size"></i>
+                    <i class="fa-solid fa-briefcase fs-1"></i>
                 </a>
                 <a href="#about">
-                    <i class="fa-solid fa-image f-size"></i>
+                    <i class="fa-solid fa-image fs-1"></i>
                 </a>
                 <a href="#about">
-                    <i class="fa-solid fa-video f-size"></i>
+                    <i class="fa-solid fa-video fs-1"></i>
                 </a>
                 <a href="#about">
-                    <i class="fa-solid fa-film f-size"></i>
+                    <i class="fa-solid fa-film fs-1"></i>
                 </a>
             </div>
 

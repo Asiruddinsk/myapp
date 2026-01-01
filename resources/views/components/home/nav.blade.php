@@ -8,7 +8,7 @@
 
         <div id="myNav" class="myNav">
 
-            <button onclick="closeFunction()" class="btn-close">&times;</button>
+            <button onclick="closeFunction()" class="nav-close">&times;</button>
 
             <nav>
 

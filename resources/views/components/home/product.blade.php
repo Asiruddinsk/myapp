@@ -1,4 +1,4 @@
-<div class="text-center text-light p">
+<div class="text-center text-light py-5">
     <h1 class="letter-spacing">MY PRODUCT</h1>
     <div class="line-design">
         <div class="line-1"></div>

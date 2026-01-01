@@ -1,11 +1,11 @@
 <div class="header-container">
     <h1>Web Development Programming Language</h1>
 </div>
-<div class="container-btn" id="myBtnContainer">
-    <button class="btn active-filter" onclick="filterSelection('all')">All</button>
-    <button class="btn" onclick="filterSelection('front')">front-end</button>
-    <button class="btn" onclick="filterSelection('backend')">back-end</button>
-    <button class="btn" onclick="filterSelection('fullstack')">fullstack</button>
+<div class="container-btn py-5" id="myBtnContainer">
+    <button class="btn btn-success active-filter" onclick="filterSelection('all')">All</button>
+    <button class="btn btn-success" onclick="filterSelection('front')">front-end</button>
+    <button class="btn btn-success" onclick="filterSelection('backend')">back-end</button>
+    <button class="btn btn-success" onclick="filterSelection('fullstack')">fullstack</button>
 
 </div>
 
