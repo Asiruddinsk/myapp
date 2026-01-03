@@ -6,28 +6,13 @@ function profileFunction ()
 }
 
 
-
-
-
-
-new Typewriter( '#typewriter', {
-    strings: [ 'Website Designer',
-        'web developer',
-        'graphic designer',
-        'UI/UX designer',
-        'front-end developer',
-        'back-end developer'
-    ],
-    autoStart: true,
-    loop: true,
-} );
-
 function openMenuFunction ()
 {
     var x = document.getElementById( "myNav" ).classList.toggle( 'show' );
     document.getElementById( "mySignin" ).classList.remove( "show-signin" );
     document.getElementById( 'mySignin_1' ).classList.remove( 'mySignin-content-show' );
     document.getElementById( 'mySignin_2' ).classList.remove( 'mySignin-content-show-1' );
+    myDiv.classList.remove( 'mydivShow' );
 }
 function closeFunction ()
 {
@@ -55,8 +40,44 @@ window.onclick = function ( event )
 
 // signin btn===========
 
-/* When the user clicks on the button,
-toggle between hiding and showing the dropdown content */
+
+const myDiv = document.getElementById( 'myDiv' );
+
+const showButton = document.getElementById( 'showButton' );
+
+function showDiv ()
+{
+    myDiv.classList.toggle( 'mydivShow' );
+}
+
+function hideDiv ()
+{
+    myDiv.classList.remove( 'mydivShow' );
+
+
+}
+
+
+
+showButton.addEventListener( 'click', function ( event )
+{
+    // alert( 'click' );
+    event.stopPropagation();
+    showDiv();
+    document.getElementById( "myNav" ).classList.remove( 'show' );
+
+
+} );
+
+document.addEventListener( 'click', function ( event )
+{
+    if ( !myDiv.contains( event.target ) && event.target !== showButton )
+    {
+        hideDiv();
+    }
+} );
+
+
 function signInFunction ()
 {
     document.getElementById( "mySignin" ).classList.toggle( "show-signin" );
@@ -67,9 +88,12 @@ function signInFunction ()
 
 }
 
+
+
 function signinCloseFunction ()
 {
-    document.getElementById( "mySignin" ).classList.remove( "show-signin" );
+    myDiv.classList.remove( 'mydivShow' );
+
     document.getElementById( 'mySignin_1' ).classList.remove( 'mySignin-content-show' );
     document.getElementById( 'mySignin_2' ).classList.remove( 'mySignin-content-show-1' );
 
@@ -98,23 +122,6 @@ function forgotFunction ()
 
 }
 
-// Close the dropdown menu if the user clicks outside of it
-// window.onclick = function ( e )
-// {
-//     if ( !e.target.matches( '.signup-btn' ) )
-//     {
-//         var dropdowns = document.getElementsByClassName( "mySignin-content" );
-//         var i;
-//         for ( i = 0; i < dropdowns.length; i++ )
-//         {
-//             var openDropdown = dropdowns[ i ];
-//             if ( openDropdown.classList.contains( 'show-signin' ) )
-//             {
-//                 openDropdown.classList.remove( 'show-signin' );
-//             }
-//         }
-//     }
-// }
 
 
 
@@ -175,6 +182,20 @@ for ( var i = 0; i < btns.length; i++ )
         this.className += " active-filter";
     } );
 }
+
+
+
+new Typewriter( '#typewriter', {
+    strings: [ 'Website Designer',
+        'web developer',
+        'graphic designer',
+        'UI/UX designer',
+        'front-end developer',
+        'back-end developer'
+    ],
+    autoStart: true,
+    loop: true,
+} );
 
 
 

@@ -193,9 +193,24 @@ input[type="search"] {
 
 /* sign in form create */
 
-.mySignin-content {
+.mydiv {
   position: absolute;
   top: 60px;
+  right: 0;
+  width: auto;
+  height: auto;
+  display: none;
+  z-index: 99;
+}
+
+.mydivShow {
+  display: block;
+}
+
+
+.mySignin-content {
+  position: absolute;
+  top: 0;
   right: 0;
   width: 400px;
   height: auto;
@@ -203,12 +218,14 @@ input[type="search"] {
   background-color: var(--background-color);
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
-  display: none;
+  z-index: 99 !important;
+  /* display: none; */
 }
+
 
 .mySignin-content-1 {
   position: absolute;
-  top: 60px;
+  top: 0;
   right: 0;
   width: 400px;
   height: auto;
@@ -217,19 +234,23 @@ input[type="search"] {
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   display: none;
+  z-index: 99 !important;
 }
+
+
 
 .mySignin-content-2 {
   position: absolute;
-  top: 60px;
+  top: 0;
   right: 0;
   width: 400px;
   height: auto;
-  padding: 20px;
+  padding: 50px 10px;
   background-color: var(--background-color);
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   display: none;
+  z-index: 99 !important;
 }
 
 .mySignin-content-show-1 {

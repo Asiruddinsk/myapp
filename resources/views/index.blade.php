@@ -68,7 +68,7 @@
         </div>
 
 
-        <script src="{{asset('asset/js/index.js')}}"></script>
+        <script src="{{asset('/asset/js/index.js')}}"></script>
 
     </body>
 

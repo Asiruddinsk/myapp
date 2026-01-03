@@ -27,7 +27,7 @@
         </div>
 
 
-        @include('components.home.js-link')
+        <script src="{{asset('/asset/js/index.js')}}"></script>
 
     </body>
 

@@ -2,8 +2,8 @@
 
     <head>
         <meta charset="UTF-8">
-        <meta name="description" content="Portfolio Codezara Website Designer, about us ">
-        <meta name="keywords" content="Codezara, about us">
+        <meta name="description" content="Portfolio Codezara Website Designer ">
+        <meta name="keywords" content="Codezara ">
         <meta name="author" content="Codezara ">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -14,19 +14,31 @@
 
     <body>
         <div class="main">
+
             @include('components.home.nav')
 
-            {{-- about us=========== --}}
+            <!-- header end============ -->
+
+
+            <!-- about page dsign----------- -->
 
             @include('components.home.about')
 
 
-            {{-- footer=========== --}}
+
+
+
+
+
+            <!-- footer start============ -->
+
             @include('components.home.footer')
+
+
         </div>
 
 
-        @include('components.home.js-link')
+        <script src="{{asset('/asset/js/index.js')}}"></script>
 
     </body>
 
